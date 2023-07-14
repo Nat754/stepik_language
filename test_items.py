@@ -11,4 +11,4 @@ def test_guest_should_see_button_add_to_basket(browser):
     button = browser.find_element(By.CLASS_NAME, "btn-add-to-basket")
     browser.execute_script("return arguments[0].scrollIntoView(true);", button)
     time.sleep(2)
-    assert es.visibility_of_element_located(button)
+    assert es.visibility_of_element_located(button), "Button is not visible"
